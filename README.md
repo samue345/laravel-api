@@ -10,8 +10,11 @@ API Laravel com autenticação (Sanctum) e pagamentos.
 #É necessário ter o docker e docker compose instalados 
 docker compose up -d --build
 #Em alguns casos pode ser necessario rodar esses comandos, mas via de regra não precisa
-docker compose exec app php artisan key:generate
-docker compose exec app php artisan migrate
+docker compose exec laravel-app php artisan key:generate
+docker compose exec laravel-app php artisan migrate
+
+#Rode as migrations dentro do container
+docker compose exec laravel-app php artisan migrate
 
 Autenticação
 Registrar
