@@ -7,7 +7,9 @@ API Laravel com autenticação (Sanctum) e pagamentos.
 ## Rodar localmente
 
 ```bash
+#É necessário ter o docker e docker compose instalados 
 docker compose up -d --build
+#Em alguns casos pode ser necessario rodar esses comandos, mas via de regra não precisa
 docker compose exec app php artisan key:generate
 docker compose exec app php artisan migrate
 
